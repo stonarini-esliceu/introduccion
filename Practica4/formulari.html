@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Formulario</title>
+</head>
+
+<body>
+    <h1>Exercici, formulari de Registre</h1>
+    <!-- Creamos el form. Si no hay "accion", de default hay la direccion del mismo documento. Por eso la quitamos -->
+    <form method="GET">
+        <div>
+            <!-- Para cada "input" pondremos un "label" para describir a quien use el formulario que 
+            informacion tiene que insertar -->
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" placeholder="Paco" required>
+            <!-- En cada input pondremos required para que se requiera -->
+            <label for="surname">Apellido:</label>
+            <input type="text" id="surname" placeholder="Fernandez" required>
+        </div>
+        <div>
+            <!-- El tag "radio" sirve para preguntas con diferentes opciones, para agrupar diferentes opciones tienen que tenere el mismo "name" -->
+            <label for="male">Hombre:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="female">Mujer:</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="other">Otro:</label>
+            <input type="radio" id="other" name="gender" value="other" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <!-- Si usamos el "type" email, solo dejara poner texto formado como una email (nombre@mail.algo) -->
+            <input type="email" id="email" placeholder="Tu Email" required>
+            <!-- Si usamos el "type" password, lo que escribiremos sera ocultado -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" minlength="5" maxlength="10" required>
+            <!-- Despues usamos "minlength" y "maxlength" para determinar el minimo y el maximo de caracters-->
+        </div>
+        <div>
+            <label for="date">Data de Nacimiento:</label>
+            <input type="date" id="date" required>
+        </div>
+        <div>
+            <label for="conditions">Estoy de acuerdo con los terminos y condiciones</label>
+            <input type="checkbox" id="conditions" required>
+        </div>
+        <!-- Por ultimo ponemos el "typo" submit y ya esta acabado el formulario -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
